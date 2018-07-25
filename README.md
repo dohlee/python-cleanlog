@@ -11,11 +11,13 @@ pip install cleanlog
 ## At a glance
 
 ```python
-# cleanlog.py
+# log.py
 import cleanlog
-import logging
 
 logger = cleanlog.ColoredLogger('mylogger')
+# Note that since cleanlog just wraps built-in logging module,
+# this is equivalent to logger.setLevel(logging.DEBUG).
+logger.setLevel(cleanlog.DEBUG)
 
 logger.critical('A critical message.')
 logger.error('An error message.')
@@ -24,7 +26,7 @@ logger.info('An info message.')
 logger.debug('A debug message.')
 ```
 
-[TODO] Make SVG animation here.
+![log.py](img/glance.svg)
 
 ### TODO
 
