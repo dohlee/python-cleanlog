@@ -26,7 +26,7 @@ logger.info('An info message.')
 logger.debug('A debug message.')
 ```
 
-![log.py](img/glance.svg)
+![log.py](https://cdn.rawgit.com/dohlee/python-cleanlog/develop/img/glance.svg)
 
 ### TODO
 
