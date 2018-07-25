@@ -27,10 +27,12 @@ setup(
     version='0.1.0',
     license='MIT license',
     description='Python package for nice colored logs.',
-    long_description='%s\n%s' % (
-        re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
-        re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
-    ),
+    # long_description='%s\n%s' % (
+    #     re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
+    #     re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
+    # ),
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     author='Dohoon Lee',
     author_email='dohlee.bioinfo@gmail.com',
     url='https://github.com/dohlee/python-cleanlog',
@@ -48,7 +50,6 @@ setup(
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
@@ -62,10 +63,12 @@ setup(
         'Topic :: Utilities',
     ],
     keywords=[
+        'python', 'logging'
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
     install_requires=[
         # eg: 'aspectlib==1.1.1', 'six>=1.7',
+        'termcolor>=1.1.0',
     ],
     extras_require={
         # eg:
