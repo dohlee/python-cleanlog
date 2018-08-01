@@ -18,8 +18,13 @@ def ColoredLogger(name=None, *args, **kwargs):
     """
     """
     logger = logging.getLogger(name)
-    stream_handler = logging.StreamHandler()
-    stream_handler.setFormatter(cf.ColoredFormatter())
-    logger.addHandler(stream_handler)
+    if not len(logger.handlers):
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(cf.ColoredFormatter())
+        logger.addHandler(stream_handler)
 
     return logger
+
+
+# Wrap logging.getLogger just for convenience.
+getLogger = logging.getLogger
