@@ -30,5 +30,4 @@ logger.debug('A debug message.')
 
 ### TODO
 
-- [ ] Implement cleanlog.BasicLogger.
-
+- [x] Implement cleanlog.BasicLogger.

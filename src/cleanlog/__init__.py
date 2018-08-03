@@ -14,6 +14,17 @@ DEBUG = 10
 NOTSET = 0
 
 
+def BasicLogger(name=None, *args, **kwargs):
+    """
+    """
+    logger = logging.getLogger(name)
+    if not len(logger.handlers):
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(cf.BasicFormatter())
+        logger.addHandler(stream_handler)
+
+    return logger
+
 def ColoredLogger(name=None, *args, **kwargs):
     """
     """

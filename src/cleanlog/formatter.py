@@ -40,6 +40,14 @@ _level_to_color = {
     NOTSET: 'white',
 }
 
+class BasicFormatter(logging.Formatter):
+    """
+    """
+    default_format = '[%(levelname)-.1s %(name)s %(asctime)s] %(message)s'
+
+    def __init__(self, fmt=default_format, datefmt=None, style='%'):
+        super(BasicFormatter, self).__init__(fmt=fmt, datefmt=datefmt, style=style)
+
 
 class ColoredFormatter(logging.Formatter):
     """
