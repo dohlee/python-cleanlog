@@ -1,4 +1,4 @@
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 import logging
 import cleanlog.formatter as cf
@@ -18,8 +18,13 @@ def ColoredLogger(name=None, *args, **kwargs):
     """
     """
     logger = logging.getLogger(name)
-    stream_handler = logging.StreamHandler()
-    stream_handler.setFormatter(cf.ColoredFormatter())
-    logger.addHandler(stream_handler)
+    if not len(logger.handlers):
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(cf.ColoredFormatter())
+        logger.addHandler(stream_handler)
 
     return logger
+
+
+# Wrap logging.getLogger just for convenience.
+getLogger = logging.getLogger
