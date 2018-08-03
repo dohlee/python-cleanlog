@@ -24,9 +24,9 @@ Overview
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/cleanlog
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/dohlee/python-cleanlog/v0.1.3.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/dohlee/python-cleanlog/v0.1.4.svg
     :alt: Commits since latest release
-    :target: https://github.com/dohlee/python-cleanlog/compare/v0.1.3...master
+    :target: https://github.com/dohlee/python-cleanlog/compare/v0.1.4...master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/cleanlog.svg
     :alt: PyPI Wheel
