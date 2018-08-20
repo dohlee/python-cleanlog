@@ -51,12 +51,16 @@ class BasicFormatter(logging.Formatter):
 
 class ColoredFormatter(logging.Formatter):
     """
+    Formatter class for `ColoredLogger`.
     """
     default_format = '[%(levelname)-.1s %(name)s %(asctime)s] %(message)s'
 
     def __init__(self, fmt=default_format, datefmt=None, style='%'):
         super(ColoredFormatter, self).__init__(fmt=fmt, datefmt=datefmt, style=style)
 
+    def _is_colored(self, message):
+        return message.startswith('\x1b[')
+
     def formatMessage(self, record):
-        record.message = colored(record.message, 'white')
+        record.message = colored(record.message, 'white') if not self._is_colored(record.message) else record.message
         return colored(self._style.format(record), _level_to_color[record.levelno])
