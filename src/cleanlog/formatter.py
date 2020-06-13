@@ -53,7 +53,8 @@ class ColoredFormatter(logging.Formatter):
     """
     Formatter class for `ColoredLogger`.
     """
-    default_format = '[%(levelname)-.1s %(name)s %(asctime)s] %(message)s'
+    # default_format = '[%(levelname)-.1s %(name)s %(asctime)s] %(message)s'
+    default_format = '[%(asctime)s %(name)s] [%(levelname)s] %(message)s'
 
     def __init__(self, fmt=default_format, datefmt=None, style='%'):
         super(ColoredFormatter, self).__init__(fmt=fmt, datefmt=datefmt, style=style)
