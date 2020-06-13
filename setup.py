@@ -24,7 +24,7 @@ def read(*names, **kwargs):
 
 setup(
     name='cleanlog',
-    version='0.1.4',
+    version='0.1.5',
     license='MIT license',
     description='Python package for nice colored logs.',
     # long_description='%s\n%s' % (
